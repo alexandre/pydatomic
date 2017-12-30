@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
+
 import requests
-from urlparse import urljoin
+try:
+    from urlparse import urljoin
+except ModuleNotFoundError:
+    from urllib.parse import urljoin
+
 from pydatomic.edn import loads
 
 
